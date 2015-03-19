@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hasyimcom.androidphp" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- All Product activity -->
+        <activity
+            android:name="hasyimcom.androidphp.AllProductsActivity"
+            android:label="All Products">
+         </activity>
+
+        <!-- Add Product activity -->
+        <activity
+            android:name="hasyimcom.androidphp.NewProductActivity"
+            android:label="New Products">
+        </activity>
+
+        <!-- Edit Product activity -->
+        <activity
+            android:name="hasyimcom.androidphp.EditProductActivity"
+            android:label="All Products">
+        </activity>
+
+    </application>
+
+    <uses-permission
+        android:name="android.permission.INTERNET">
+    </uses-permission>
+</manifest>
