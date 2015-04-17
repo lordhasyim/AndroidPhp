@@ -41,11 +41,11 @@ public class AllProductsActivity extends ListActivity {
     // url to get all products list
     // example url "http://api.androidhive.info/android_connect/get_all_products.php"
     private static String url_all_products =
-            "http://10.0.2.2/pelatihan/phpAndroid/getAllProducts.php";
+            "http://10.0.3.2/pelatihan/phpAndroid/getAllProducts.php";
 
     //JSON Node Names
     private static final String TAG_SUCCESS = "success";
-    private static final String TAG_PRODUCTS = "product";
+    private static final String TAG_PRODUCTS = "products";
     private static final String TAG_PID = "pid";
     private static final String TAG_NAME = "name";
     private static final String TAG_PRICE = "price";
@@ -143,6 +143,7 @@ public class AllProductsActivity extends ListActivity {
                     // looping through All Products
                     for (int i = 0; i < products.length(); i++) {
                         JSONObject c = products.getJSONObject(i);
+
 
                         // Storing each json item in variable
                         String id = c.getString(TAG_PID);

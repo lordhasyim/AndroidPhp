@@ -40,24 +40,13 @@ public class EditProductActivity extends Activity {
     JSONParser jsonParser = new JSONParser();
 
     // single product url
-  //  private static final String url_product_detials = "http://api.androidhive.info/android_connect/get_product_details.php";
+    private static final String url_product_details = "http://10.0.3.2/pelatihan/phpAndroid/getProductsDetails.php";
 
     // url to update product
-  //  private static final String url_update_product = "http://api.androidhive.info/android_connect/update_product.php";
-
-    // url to delete product
-    //private static final String url_delete_product = "http://api.androidhive.info/android_connect/delete_product.php";
-
-//    http://10.0.3.2:80/pelatihan/phpAndroid/createProduct.php
-
-    // single product url
-    private static final String url_product_details = "http://10.0.2.2/pelatihan/phpAndroid/getProductsDetails.php";
-
-    // url to update product
-    private static final String url_update_product = "http://10.0.2.2/pelatihan/updateProduct.php";
+    private static final String url_update_product = "http://10.0.3.2/pelatihan/phpAndroid/updateProduct.php";
 
     //url to delete product
-    private static final String url_delete_product = "http://10.0.2.2/pelatihan/phpAndroid/deleteProduct.php";
+    private static final String url_delete_product = "http://10.0.3.2/pelatihan/phpAndroid/deleteProduct.php";
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
@@ -124,11 +113,11 @@ public class EditProductActivity extends Activity {
          * */
         @Override
         protected String doInBackground(String... params) {
-            //updating UI from Background Thread
+            //updating UI from Background Threads
             runOnUiThread(new Runnable() {
-                @Override
                 public void run() {
                     // Check for success tag
+                  //  JSONObject product = null;
                     int success;
                     try {
                         // Building Parameters
@@ -166,19 +155,20 @@ public class EditProductActivity extends Activity {
                         } else {
                             // product with pid not found
                         }
-                    } catch (JSONException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
-            });
+          });
 
             return null;
         }
+
         /** After completing background task Dismiss the progress dialog */
-        @Override
+        /** */
         protected void onPostExecute(String file_url) {
-            // dismiss the dialog once got all details
-            pDialog.dismiss();
+        // dismiss the dialog once got all details
+        pDialog.dismiss();
         }
     }
 
@@ -305,46 +295,4 @@ public class EditProductActivity extends Activity {
             pDialog.dismiss();
         }
     }
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

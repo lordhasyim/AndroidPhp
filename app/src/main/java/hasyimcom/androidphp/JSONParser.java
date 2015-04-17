@@ -29,7 +29,9 @@ public class JSONParser {
 
     static InputStream is = null;
     static JSONObject jObj = null;
-    static String json = "";
+    //static String json = "";
+    static String json = null;
+//    static HttpResponse httpResponse;
 
     // constructor
     public JSONParser() {
@@ -74,11 +76,11 @@ public class JSONParser {
             e.printStackTrace();
         }
     try {
-      //  BufferedReader reader = new BufferedReader(new InputStreamReader(
-      //          is, "iso-8859-1"), 8);
-       //tambahan sendiri
         BufferedReader reader = new BufferedReader(new InputStreamReader(
-                is, HTTP.UTF_8), 8);
+               is, "iso-8859-1"), 8);
+       //tambahan sendiri
+       // BufferedReader reader = new BufferedReader(new InputStreamReader(
+       //         is, HTTP.UTF_8), 8);
         StringBuilder sb = new StringBuilder();
         String line = null;
         while ((line = reader.readLine()) != null) {
@@ -99,13 +101,13 @@ public class JSONParser {
         return jObj;
     }
     // TAMBAHAN SENDIRI
-    public static JSONObject getjObj() {
+   // public static JSONObject getjObj() {
 
-        return jObj;
-    }
+    //    return jObj;
+   // }
 
-    public static void setjObj (JSONObject jObj) {
+    //public static void setjObj (JSONObject jObj) {
 
-        JSONParser.jObj = jObj;
-    }
+//        JSONParser.jObj = jObj;
+  //  }
 }

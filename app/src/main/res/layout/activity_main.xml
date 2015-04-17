@@ -5,15 +5,21 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".MainActivity"
-    android:background="#9c27b0"
-    >
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="530dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/ic_launcher"
+        android:background="#8e24aa"
+        android:layout_weight="0.42"/>
 
     <Button
         android:id="@+id/btnViewProducts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="View Products"
-        android:layout_margin="25dp"
         />
 
     <Button
@@ -21,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add New Products"
-        android:layout_margin="25dp"
         />
 
 
